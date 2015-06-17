@@ -1,0 +1,47 @@
+{
+  "name": "quad",
+  "version": "0.0.0",
+  "main": "src/quad.coffee",
+  "description": "The best module ever.",
+  "homepage": "https://github.com/1egoman/quad",
+  "bugs": "https://github.com/1egoman/quad/issues",
+  "author": {
+    "name": "Ryan Gaus",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1egoman/quad"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "mongoose": "^4.0.1",
+    "body-parser": "^1.12.3",
+    "express": "^4.12.3",
+    "express-session": "^1.11.1",
+    "express-static": "^1.0.3",
+    "ejs": "^2.3.1",
+    
+    "chalk": "^1.0.0",
+    "node-sass-middleware": "^0.5.0"
+  },
+  "devDependencies": {
+    "matchdep": "~0.1.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "sinon-chai": "~2.4.0",
+    "chai": "~1.7.2",
+    "mocha": "~1.12.1",
+    "sinon": "~1.7.3"
+  },
+  "scripts": {
+    "start": "nodemon src/quad.coffee"
+  }
+}

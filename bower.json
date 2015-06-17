@@ -1,0 +1,25 @@
+{
+  "name": "quad",
+  "version": "0.0.0",
+  "main": "src/quad.coffee",
+  "description": "The best module ever.",
+  "homepage": "https://github.com/1egoman/quad",
+  "bugs": "https://github.com/1egoman/quad/issues",
+  "author": {
+    "name": "Ryan Gaus",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1egoman/quad"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.3"
+  }
+}
