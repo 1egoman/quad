@@ -1,6 +1,8 @@
 
 # decode a value from another metric unit into the base metric unit
 exports.decodeValue = (value) ->
+  if typeof value is 'number' then return value
+
   pref = value.unit[0]
   unit = switch pref
     when 'k' then 3
@@ -16,9 +18,33 @@ exports.decodeValue = (value) ->
   quant = value.quantity or value.value
   quant * Math.pow 10, unit
 
+
+
+
+
+
+###########################
+# Quad controlling events #
+###########################
+
+do_movement_event = (res, data) ->
+  res.send "yo!"
+
 exports.onMiddleware = (req, res) ->
 
-  res.send
-    name: req.body.name
+  switch req.body.name
 
-    value: exports.decodeValue req.body.data.x
+    when "device.movement.latrot", "device.movement.lat", "device.movement.rot"
+      do_movement_event res, req.body.data
+
+    when "device.identify"
+      do_device_identify res
+
+    else
+      res.send
+        name: "error.no.such.event"
+
+  # res.send
+  #   name: req.body.name
+  #
+  #   value: exports.decodeValue req.body.data.x
